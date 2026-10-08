@@ -1611,71 +1611,153 @@ body {
   filter: invert(1);
 }
 
-/* Achievements Item list */
+/* Achievements Grid & Photo Cards */
 .achievements-section {
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
 }
 
 .achieve-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
 }
 
-.achieve-item {
+@media (max-width: 900px) {
+  .achieve-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.achieve-card {
+  padding: 0;
+  overflow: hidden;
+  border-radius: 16px;
+  cursor: pointer;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  text-align: left;
-  padding: 2rem 1.75rem;
-  height: 100%;
+  transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.35s ease, box-shadow 0.35s ease;
+  background: var(--glass-bg);
+  border: 1px solid var(--border-color);
   position: relative;
-  transition: transform var(--transition-medium), border-color var(--transition-medium), box-shadow var(--transition-medium);
 }
 
-.achieve-item:hover {
-  transform: translateY(-4px);
-  border-color: var(--border-hover);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25), 0 0 15px var(--accent-glow-subtle);
+.achieve-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--accent);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4), 0 0 24px var(--accent-glow-subtle);
 }
 
-.achieve-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.achieve-media {
+  position: relative;
   width: 100%;
-  margin-bottom: 1.2rem;
+  height: 220px;
+  overflow: hidden;
+  background: #0d0d14;
 }
 
-.achieve-badge {
+.achieve-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), filter 0.4s ease;
+}
+
+.achieve-card:hover .achieve-thumb {
+  transform: scale(1.08);
+}
+
+.achieve-media-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(10, 10, 15, 0.15) 0%, rgba(10, 10, 15, 0.8) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.achieve-card:hover .achieve-media-overlay {
+  opacity: 1;
+}
+
+.achieve-expand-btn {
   display: inline-flex;
   align-items: center;
-  padding: 0.35rem 0.85rem;
+  gap: 8px;
+  padding: 0.55rem 1.15rem;
+  background: rgba(17, 17, 24, 0.9);
+  border: 1px solid var(--accent);
+  color: #FFFFFF;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  box-shadow: 0 4px 18px var(--accent-glow);
+  transform: translateY(10px);
+  transition: transform 0.3s ease;
+}
+
+.achieve-card:hover .achieve-expand-btn {
+  transform: translateY(0);
+}
+
+.achieve-tag {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  padding: 0.4rem 0.95rem;
   border-radius: 20px;
   font-family: 'Space Grotesk', sans-serif;
   font-size: 0.8rem;
   font-weight: 700;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.6px;
   text-transform: uppercase;
+  z-index: 2;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
 }
 
-.achieve-badge.winner {
-  background: rgba(176, 38, 255, 0.15);
-  color: var(--accent);
-  border: 1px solid rgba(176, 38, 255, 0.35);
+.achieve-tag.winner {
+  background: rgba(176, 38, 255, 0.9);
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 0 15px var(--accent-glow);
 }
 
-.achieve-badge.runner-up {
-  background: rgba(6, 182, 212, 0.15);
-  color: var(--cyan);
-  border: 1px solid rgba(6, 182, 212, 0.35);
+.achieve-tag.runner-up {
+  background: rgba(6, 182, 212, 0.9);
+  color: #0A0A0F;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 0 15px var(--cyan-glow);
 }
 
-.achieve-badge.best-paper {
-  background: rgba(16, 185, 129, 0.15);
-  color: #10b981;
-  border: 1px solid rgba(16, 185, 129, 0.35);
+.achieve-tag.best-paper {
+  background: rgba(16, 185, 129, 0.9);
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 0 15px rgba(16, 185, 129, 0.4);
+}
+
+.achieve-tag.expo {
+  background: rgba(245, 158, 11, 0.9);
+  color: #0A0A0F;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 0 15px rgba(245, 158, 11, 0.4);
+}
+
+.achieve-info {
+  padding: 1.5rem 1.75rem 1.75rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.achieve-meta-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
 }
 
 .achieve-date {
@@ -1684,19 +1766,79 @@ body {
   color: var(--text-muted);
 }
 
-.achieve-title {
+.achieve-verified {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.78rem;
+  color: var(--cyan);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.achieve-card-title {
   font-family: 'Space Grotesk', sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: var(--text-primary);
-  margin-bottom: 0.85rem;
+  margin-bottom: 0.75rem;
   line-height: 1.35;
 }
 
 .achieve-desc {
-  font-size: 0.95rem;
+  font-size: 0.93rem;
   color: var(--text-secondary);
   line-height: 1.6;
+  margin: 0;
+}
+
+/* Lightbox Modal */
+.photo-modal-card {
+  max-width: 840px;
+  width: 92%;
+  padding: 1.5rem;
+  position: relative;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.75);
+  animation: modalScaleUp 0.3s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.photo-modal-img-wrap {
+  width: 100%;
+  max-height: 520px;
+  overflow: hidden;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000000;
+}
+
+.photo-modal-img {
+  width: 100%;
+  max-height: 520px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.photo-modal-caption {
+  margin-top: 1.25rem;
+}
+
+.photo-modal-caption h4 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.3rem;
+  color: var(--text-primary);
+  margin-bottom: 0.4rem;
+}
+
+.photo-modal-caption p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.5;
   margin: 0;
 }
 
