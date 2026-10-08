@@ -1,0 +1,12 @@
+<svg viewBox="0 0 24 24" fill="none" stroke="#B026FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="12" cy="12" r="3" fill="#B026FF" />
+  <circle cx="5" cy="7" r="1.5" fill="#06b6d4" stroke="#06b6d4" />
+  <circle cx="19" cy="7" r="1.5" fill="#06b6d4" stroke="#06b6d4" />
+  <circle cx="5" cy="17" r="1.5" fill="#06b6d4" stroke="#06b6d4" />
+  <circle cx="19" cy="17" r="1.5" fill="#06b6d4" stroke="#06b6d4" />
+  <line x1="5" y1="7" x2="12" y2="12" stroke="#06b6d4" />
+  <line x1="19" y1="7" x2="12" y2="12" stroke="#06b6d4" />
+  <line x1="5" y1="17" x2="12" y2="12" stroke="#06b6d4" />
+  <line x1="19" y1="17" x2="12" y2="12" stroke="#06b6d4" />
+  <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2z" stroke-dasharray="3,3" />
+</svg>

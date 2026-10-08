@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shree Purvaja D | ML Engineer & AI Developer Portfolio</title>
+  <meta name="description"
+    content="Portfolio of Shree Purvaja D, a final-year M.Sc. Integrated Software Systems student specializing in Machine Learning, Generative AI, RAG pipelines, and NLP systems.">
+
+  <!-- Premium Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap"
+    rel="stylesheet">
+
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Devicon for Technology Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+  <!-- GSAP for Professional Animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+
+  <!-- Background Particle Canvas -->
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- Sticky Header & Navbar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo" id="logoClick">
+        <span class="monogram">SP</span>
+        <span class="full-name">Shree Purvaja</span>
+      </a>
+
+      <nav class="nav-links">
+        <button class="nav-btn active" data-tab="home">Home</button>
+        <button class="nav-btn" data-tab="projects">Projects</button>
+        <button class="nav-btn" data-tab="about">About</button>
+        <button class="nav-btn" data-tab="contact">Contact</button>
+        <a href="https://drive.google.com/file/d/1bUL43ZpVA_qvTF9tpmEV5CX33neO5Y-f/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="nav-btn" style="text-decoration:none;">Resume &nearr;</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Theme Toggle -->
+        <button id="themeToggle" aria-label="Toggle Theme" class="icon-btn">
+          <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4" />
+            <path
+              d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+          </svg>
+          <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+          </svg>
+        </button>
+        <!-- Mobile Menu Toggle -->
+        <button id="mobileMenuBtn" aria-label="Open Menu" class="icon-btn mobile-only">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <line x1="4" x2="20" y1="12" y2="12" />
+            <line x1="4" x2="20" y1="6" y2="6" />
+            <line x1="4" x2="20" y1="18" y2="18" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Viewport Content Container -->
+  <main class="content-container">
+
+    <!-- ========================================== -->
+    <!-- TAB 1: HOME PAGE                           -->
+    <!-- ========================================== -->
+    <section id="home" class="tab-pane active">
+
+      <!-- HERO SECTION -->
+      <div class="hero-grid container">
+        <div class="hero-text animate-fade-up">
+          <div class="badge-status">
+            <span class="pulse-dot"></span> Open To Work
+          </div>
+          <h1>Hi, I'm <span class="typing-text highlight-purple">Shree Purvaja D</span></h1>
+          <h2 class="cycling-subtitle">ML Engineer</h2>
+          <p class="hero-bio">
+            Motivated and Growth-Oriented AI Developer & Machine Learning Engineer passionate about building
+            intelligent and data-driven AI solutions using Machine Learning, Generative AI
+            and LLM technologies.
+            Committed to continuous innovation and delivering meaningful impact through
+            Artificial Intelligence.
+            Currently open to ML Engineer and AI Developer roles.
+          </p>
+          <div class="cta-group">
+            <button class="btn btn-primary" onclick="switchTab('projects')">View Projects &rarr;</button>
+            <button class="btn btn-outline" onclick="switchTab('contact')">Let's Connect &darr;</button>
+            <a href="https://drive.google.com/file/d/1bUL43ZpVA_qvTF9tpmEV5CX33neO5Y-f/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-resume" id="heroResumeBtn" aria-label="View Resume">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+              Resume &nearr;
+            </a>
+          </div>
+          <div class="hero-tech-badges">
+            <span class="tech-badge">Python</span>
+            <span class="tech-badge">PyTorch</span>
+            <span class="tech-badge">TensorFlow</span>
+            <span class="tech-badge">HuggingFace</span>
+            <span class="tech-badge">LangChain</span>
+            <span class="tech-badge">Scikit-learn</span>
+            <span class="tech-badge">Flask</span>
+            <span class="tech-badge">FastAPI</span>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="profile-glow-ring">
+            <div class="rotating-ring"></div>
+            <img src="assets/profile.jpg" alt="Shree Purvaja D" class="profile-img">
+          </div>
+        </div>
+      </div>
+
+      <!-- FEATURED PROJECTS -->
+      <div class="featured-projects container animate-fade-up">
+        <div class="section-header">
+          <h3 class="section-title">Featured Projects</h3>
+          <p class="section-subtitle">A selective view of my recent AI development research and builds (Click to view
+            pipeline & sandbox)</p>
+        </div>
+
+        <div class="projects-row">
+          <!-- Card 1: CARCINOGNOSIS -->
+          <div class="project-card glass-card clickable-project-card" data-project-id="carcinognosis">
+            <div class="card-img-wrapper">
+              <img src="assets/projects/carcinognosis.jpg" alt="CARCINOGNOSIS : Multi - Cancer Prediction" class="card-img">
+              <div class="card-overlay">
+                <button class="btn btn-small">Open Pipeline Modal &rarr;</button>
+              </div>
+            </div>
+            <div class="card-body">
+              <span class="card-tag">ML & DL &middot; 06/2025 – 08/2025</span>
+              <h4 class="card-title">CARCINOGNOSIS : Multi - Cancer Prediction</h4>
+              <p class="card-desc">Deep learning system detecting 26+ cancer subtypes across 8 organs with 96.38% accuracy. Trained on 130K+ medical images with Google Gemini AI summaries.</p>
+              <div class="card-tech">
+                <span>PyTorch</span> <span>CNN</span> <span>Google Gemini AI</span> <span>Data Augmentation</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Legal AI -->
+          <div class="project-card glass-card clickable-project-card" data-project-id="legal">
+            <div class="card-img-wrapper">
+              <img src="assets/projects/legalai.jpg" alt="Indian Legal AI Case Triage System" class="card-img">
+              <div class="card-overlay">
+                <button class="btn btn-small">Open Pipeline Modal &rarr;</button>
+              </div>
+            </div>
+            <div class="card-body">
+              <span class="card-tag">NLP &middot; 02/2026 – 03/2026</span>
+              <h4 class="card-title">Indian Legal AI Case Triage System</h4>
+              <p class="card-desc">Hybrid classification pipeline for legal briefs (91.8% accuracy), fine-tuned Legal-BERT & spaCy NER, and automated bail eligibility triage.</p>
+              <div class="card-tech">
+                <span>Python</span> <span>Legal-BERT</span> <span>spaCy NER</span> <span>FastAPI</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: AURA MedAI -->
+          <div class="project-card glass-card clickable-project-card" data-project-id="auramed">
+            <div class="card-img-wrapper">
+              <img src="assets/projects/auramed.jpg" alt="AURA MedAI" class="card-img">
+              <div class="card-overlay">
+                <button class="btn btn-small">Open Pipeline Modal &rarr;</button>
+              </div>
+            </div>
+            <div class="card-body">
+              <span class="card-tag">Generative AI &middot; 01/2026 – 02/2026</span>
+              <h4 class="card-title">AURA MedAI</h4>
+              <p class="card-desc">RAG-based clinical assistant using Flask, LangChain, and Groq (Llama-3.1-8b), retrieving diagnostic references from 1,000+ medical literature chunks with ~90% accuracy.</p>
+              <div class="card-tech">
+                <span>LangChain</span> <span>Groq</span> <span>Pinecone</span> <span>AWS EC2</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Gesture AI -->
+          <div class="project-card glass-card clickable-project-card" data-project-id="gestureai">
+            <div class="card-img-wrapper">
+              <img src="assets/projects/gestureai.jpg" alt="Gesture AI" class="card-img">
+              <div class="card-overlay">
+                <button class="btn btn-small">Open Pipeline Modal &rarr;</button>
+              </div>
+            </div>
+            <div class="card-body">
+              <span class="card-tag">Computer Vision &middot; 2025</span>
+              <h4 class="card-title">Gesture AI</h4>
+              <p class="card-desc">Real-time computer vision hand gesture interpretation through camera feeds, classifying sign language gestures with multilingual translation across text and speech.</p>
+              <div class="card-tech">
+                <span>TensorFlow</span> <span>OpenCV</span> <span>Computer Vision</span> <span>Multilingual</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="center-btn">
+          <button class="btn btn-outline" onclick="switchTab('projects')">View All Projects &rarr;</button>
+        </div>
+      </div>
+
+      <!-- GITHUB ACTIVITY Heatmap & stats -->
+      <div class="github-section container animate-fade-up">
+        <div class="section-header">
+          <h3 class="section-title">Open Source Contributions</h3>
+          <p class="section-subtitle">Live analytics linked directly to my GitHub development pipeline</p>
+        </div>
+
+        <div class="github-grid">
+          <!-- Stat cards -->
+          <div class="github-stats-column">
+            <div class="stat-card glass-card">
+              <h5>Total Repos</h5>
+              <p class="stat-number">28</p>
+            </div>
+            <div class="stat-card glass-card">
+              <h5>Total Stars</h5>
+              <p class="stat-number">42</p>
+            </div>
+            <div class="stat-card glass-card">
+              <h5>Commits This Year</h5>
+              <p class="stat-number">740+</p>
+            </div>
+          </div>
+          <!-- Heatmap Card -->
+          <div class="github-chart-card glass-card">
+            <h5>Contribution Activity Pipeline</h5>
+            <div class="github-card-embed">
+              <!-- Using standard iframe with lazy loading for external stats, custom styling is applied via dark-mode parameter -->
+              <img id="githubStatsImg"
+                src="https://github-readme-stats.vercel.app/api?username=ShreePurvaja&show_icons=true&theme=tokyonight&bg_color=111118&title_color=B026FF&icon_color=06b6d4&text_color=94A3B8"
+                alt="Shree Purvaja's Github stats" class="github-embed-img">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- HACKATHONS & AWARDS -->
+      <div class="hackathons-timeline container animate-fade-up">
+        <div class="section-header">
+          <h3 class="section-title">Milestones & Recognition</h3>
+          <p class="section-subtitle">Hackathons, internships, and competitive events</p>
+        </div>
+
+        <div class="timeline-row">
+          <!-- Event 1 -->
+          <div class="timeline-box glass-card">
+            <div class="node-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+              </svg>
+            </div>
+            <h4>Smart India Hackathon</h4>
+            <span class="timeline-date">Participant</span>
+            <p>Developed innovative solutions addressing governance and civic problems under national guidelines.</p>
+          </div>
+
+          <!-- Event 2 -->
+          <div class="timeline-box glass-card">
+            <div class="node-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <circle cx="12" cy="8" r="7" />
+                <path d="M8.21 13.89L7 23l5-3 5 3-1.21-9.12" />
+              </svg>
+            </div>
+            <h4>Project Expo Award</h4>
+            <span class="timeline-date">Sri Krishna College</span>
+            <p>Secured campus-wide technical recognition for outstanding Machine Learning software implementation.</p>
+          </div>
+
+          <!-- Event 3 -->
+          <div class="timeline-box glass-card">
+            <div class="node-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <rect width="20" height="14" x="2" y="3" rx="2" />
+                <line x1="8" x2="16" y1="21" y2="21" />
+                <line x1="12" x2="12" y1="17" y2="21" />
+              </svg>
+            </div>
+            <h4>Pynevera Pvt. Ltd.</h4>
+            <span class="timeline-date">ML App Developer Intern</span>
+            <p>Crafted full-stack Machine Learning components, setting up FastAPI APIs and containerized prediction
+              modules.</p>
+          </div>
+
+          <!-- Event 4 -->
+          <div class="timeline-box glass-card">
+            <div class="node-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <path d="M21.21 15.89A10 10 0 1 1 8 2.83" />
+              </svg>
+            </div>
+            <h4>Aguaclan Water Purifiers</h4>
+            <span class="timeline-date">Data Science Intern</span>
+            <p>Processed massive telemetry and operational datasets to predict system lifespan and optimize component
+              replacement rates.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CONTACT STRIP -->
+      <div class="contact-strip-section container animate-fade-up">
+        <div class="glass-card contact-strip">
+          <div class="strip-content">
+            <h4>Let's build something beautiful together.</h4>
+            <p>Open to internships, research collaborations, and production ML/AI integrations.</p>
+          </div>
+          <div class="strip-actions">
+            <button class="btn btn-primary" onclick="switchTab('contact')">Send Message &rarr;</button>
+            <div class="strip-socials">
+              <a href="https://github.com/ShreePurvaja" target="_blank" class="circle-btn" aria-label="GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path
+                    d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                </svg>
+              </a>
+              <a href="https://www.linkedin.com/in/shree-purvaja-d/" target="_blank" class="circle-btn" aria-label="LinkedIn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                  <rect width="4" height="12" x="2" y="9" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
+              </a>
+              <a href="tel:+919363080830" class="circle-btn" aria-label="Phone">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                </svg>
+              </a>
+              <a href="mailto:shreepurvaja@gmail.com" class="circle-btn" aria-label="Email">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ========================================== -->
+    <!-- TAB 2: PROJECTS PAGE                       -->
+    <!-- ========================================== -->
+    <section id="projects" class="tab-pane">
+
+      <div class="container animate-fade-up">
+        <div class="section-header text-center">
+          <h3 class="section-title">Technical Projects Registry</h3>
+          <p class="section-subtitle">Fully responsive, filtered collection of machine learning algorithms and software
+            solutions (Click any card to open sandbox & pipeline modal)</p>
+        </div>
+
+        <!-- Filter controls -->
+        <div class="project-filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="ml-dl">ML & DL</button>
+          <button class="filter-btn" data-filter="nlp">NLP</button>
+          <button class="filter-btn" data-filter="cv">Computer Vision</button>
+          <button class="filter-btn" data-filter="genai">Generative AI</button>
+        </div>
+
+        <!-- STANDALONE UNIQUE HERO FEATURE: MODEL INTERACTIVE SANDBOX -->
+        <div class="sandbox-wrapper glass-card animate-fade-up">
+          <div class="sandbox-header">
+            <div class="sandbox-title">
+              <svg class="console-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              <h4>Live Model Inference Sandbox Console</h4>
+            </div>
+            <span class="sandbox-badge">Simulated Edge Run</span>
+          </div>
+
+          <div class="sandbox-controls">
+            <div class="ctrl-group">
+              <label for="sandboxModel">Select AI System Model:</label>
+              <select id="sandboxModel" class="sandbox-select">
+                <option value="auramed">AURA MedAI — Clinical RAG Assistant (GenAI)</option>
+                <option value="legal">Indian Legal AI Case Triage — Bail & Urgency Triage (NLP)</option>
+                <option value="carcinognosis">CARCINOGNOSIS — Multi-Cancer Prediction (ML & DL)</option>
+                <option value="gestureai">Gesture AI — Hand Sign & Translation (Computer Vision)</option>
+              </select>
+            </div>
+
+            <div class="ctrl-group input-group-interactive" id="sandboxInputWrapper">
+              <label for="sandboxInput" id="inputLabel">Medical or clinical query:</label>
+              <input type="text" id="sandboxInput" class="sandbox-input" value="What are the clinical diagnostic criteria and emergency management protocols for acute appendicitis?">
+              <small class="input-hint" id="inputHint">Provide a clinical query to retrieve knowledge vectors and prompt response</small>
+            </div>
+
+            <button class="btn btn-primary" id="runInferenceBtn">Run Model Prediction &rarr;</button>
+          </div>
+
+          <div class="sandbox-terminal" id="sandboxTerminal">
+            <div class="terminal-bar">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+              <span class="terminal-title">inference_runtime.log</span>
+            </div>
+            <div class="terminal-body" id="terminalOutput">
+              <div class="term-line system-msg">Console ready. Select a model and click "Run Model Prediction" to run
+                automated diagnostic scoring.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- NEW STANDALONE FEATURE: DYNAMIC PROJECTS TIMELINE -->
+        <h4 class="timeline-headline text-center">Live Project Timeline</h4>
+
+        <div class="projects-timeline-wrapper">
+          <div class="projects-timeline-line"></div>
+
+          <!-- ================= YEAR 2026 ================= -->
+          <div class="timeline-year-label" data-year="2026">2026</div>
+
+          <!-- Card 1: AURA MedAI (Left) -->
+          <div class="project-timeline-item left clickable-project-card" data-category="genai" data-project-id="auramed">
+            <div class="project-timeline-card glass-card">
+              <div class="card-img-wrapper">
+                <img src="assets/projects/auramed.jpg" alt="AURA MedAI" class="card-img">
+              </div>
+              <div class="card-body">
+                <span class="card-tag">Generative AI &middot; 01/2026 – 02/2026</span>
+                <h4 class="card-title">AURA MedAI</h4>
+                <p class="card-desc">Built a RAG-based clinical assistant using Flask, LangChain, and Groq (Llama-3.1-8b), retrieving diagnostic references from 1,000+ medical literature chunks with ~90% accuracy. Engineered Pinecone vector DB with HuggingFace embeddings; automated CI/CD using GitHub Actions & Docker on AWS EC2.</p>
+                <div class="card-tech">
+                  <span>Flask</span> <span>LangChain</span> <span>Groq (Llama-3.1-8b)</span> <span>Pinecone</span> <span>HuggingFace</span> <span>Docker</span> <span>GitHub Actions</span> <span>AWS EC2</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Indian Legal AI Case Triage System (Right) -->
+          <div class="project-timeline-item right clickable-project-card" data-category="nlp" data-project-id="legal">
+            <div class="project-timeline-card glass-card">
+              <div class="card-img-wrapper">
+                <img src="assets/projects/legalai.jpg" alt="Indian Legal AI Case Triage System" class="card-img">
+              </div>
+              <div class="card-body">
+                <span class="card-tag">NLP &middot; 02/2026 – 03/2026</span>
+                <h4 class="card-title">Indian Legal AI Case Triage System</h4>
+                <p class="card-desc">Architected a hybrid classification pipeline categorizing legal briefs into 4+ branches (Criminal, Constitutional, Family, Corporate) with 91.8% accuracy. Fine-tuned Legal-BERT & spaCy NER models to extract 14 legal entities with 94.2% accuracy. Built an automated bail-eligibility triage algorithm (Section 436A, 167(2) CrPC) in &lt;500ms.</p>
+                <div class="card-tech">
+                  <span>Python</span> <span>Legal-BERT</span> <span>spaCy NER</span> <span>FastAPI</span> <span>PyTorch</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ================= YEAR 2025 ================= -->
+          <div class="timeline-year-label" data-year="2025">2025</div>
+
+          <!-- Card 3: CARCINOGNOSIS : Multi - Cancer Prediction (Left) -->
+          <div class="project-timeline-item left clickable-project-card" data-category="ml-dl" data-project-id="carcinognosis">
+            <div class="project-timeline-card glass-card">
+              <div class="card-img-wrapper">
+                <img src="assets/projects/carcinognosis.jpg" alt="CARCINOGNOSIS" class="card-img">
+              </div>
+              <div class="card-body">
+                <span class="card-tag">ML & DL &middot; 06/2025 – 08/2025</span>
+                <h4 class="card-title">CARCINOGNOSIS : Multi - Cancer Prediction</h4>
+                <p class="card-desc">Built a deep learning system detecting 26+ cancer subtypes across 8 organs, achieving 96.38% accuracy with ~4% error rate. Designed a pipeline processing 130K+ medical images with augmentation, and integrated Google Gemini AI for auto-generated diagnostic summaries (cutting reporting time by ~30%).</p>
+                <div class="card-tech">
+                  <span>Deep Learning</span> <span>PyTorch</span> <span>CNN</span> <span>Google Gemini AI</span> <span>Data Augmentation</span> <span>Python</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Gesture AI (Right) -->
+          <div class="project-timeline-item right clickable-project-card" data-category="cv" data-project-id="gestureai">
+            <div class="project-timeline-card glass-card">
+              <div class="card-img-wrapper">
+                <img src="assets/projects/gestureai.jpg" alt="Gesture AI" class="card-img">
+              </div>
+              <div class="card-body">
+                <span class="card-tag">Computer Vision &middot; 2025</span>
+                <h4 class="card-title">Gesture AI</h4>
+                <p class="card-desc">The system uses computer vision to detect and interpret hand gestures in real time through a camera feed. Built using Python, TensorFlow, and OpenCV, the model processes hand movements and classifies them into corresponding sign language gestures. GestureAI supports multilingual translation by converting text or speech across multiple languages.</p>
+                <div class="card-tech">
+                  <span>Python</span> <span>TensorFlow</span> <span>OpenCV</span> <span>Computer Vision</span> <span>Multilingual Translation</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ========================================== -->
+    <!-- TAB 3: ABOUT PAGE                          -->
+    <!-- ========================================== -->
+    <section id="about" class="tab-pane">
+
+      <div class="container animate-fade-up">
+
+        <!-- TOP SECTION (2 Column) -->
+        <div class="about-hero-grid">
+          <div class="about-hero-text">
+            <div class="about-name-row">
+              <h3 class="section-title">About Shree Purvaja D</h3>
+              <span class="badge-tag">Open To Work</span>
+            </div>
+            <p class="paragraph-large">
+              I'm a final-year M.Sc. Integrated Software Systems student at Sri Krishna Arts and Science College, Coimbatore, Tamil Nadu, India (graduating 2027), specializing in Machine Learning and Generative AI. I build AI systems that go beyond notebooks: RAG pipelines, fine-tuned NLP models, and deep learning solutions that are containerized, automated, and deployed.
+            </p>
+            <p>
+              My work spans NLP and LLMs (Legal-BERT, HuggingFace Transformers, LangChain, Groq), deep learning (PyTorch, TensorFlow), and MLOps (MLflow, DVC, Docker, GitHub Actions, AWS). I enjoy turning complex domains like healthcare and law into practical tools, such as a clinical RAG assistant, a legal case triage system, and a multi-cancer detection model.
+            </p>
+
+            <div class="education-card glass-card">
+              <div class="edu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                  <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5" />
+                </svg>
+              </div>
+              <div class="edu-body">
+                <h5>M.Sc. Integrated Software Systems</h5>
+                <p class="college">Sri Krishna Arts and Science College, Coimbatore</p>
+                <span class="graduation">Graduating Class of 2027</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-hero-visual">
+            <div class="profile-glow-ring">
+              <div class="rotating-ring"></div>
+              <img src="assets/profile.jpg" alt="Shree Purvaja D" class="profile-img">
+            </div>
+
+            <div class="about-socials">
+              <a href="https://github.com/ShreePurvaja" target="_blank" class="circle-btn" aria-label="GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path
+                    d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                </svg>
+              </a>
+              <a href="https://www.linkedin.com/in/shree-purvaja-d/" target="_blank" class="circle-btn" aria-label="LinkedIn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                  <rect width="4" height="12" x="2" y="9" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
+              </a>
+              <a href="tel:+919363080830" class="circle-btn" aria-label="Phone">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                </svg>
+              </a>
+              <a href="mailto:shreepurvaja@gmail.com" class="circle-btn" aria-label="Email">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- EXPERIENCES -->
+        <div class="experience-section-block animate-fade-up">
+          <div class="section-header">
+            <h3 class="section-title">Professional Internships</h3>
+            <p class="section-subtitle">Real-world engineering positions inside active tech workspaces</p>
+          </div>
+
+          <div class="experience-grid">
+            <div class="exp-card glass-card">
+              <div class="exp-header">
+                <div>
+                  <h4>ML App Developer Intern</h4>
+                  <span class="company">Pynevera Pvt. Ltd.</span>
+                </div>
+                <span class="exp-date">Jan – Mar 2025</span>
+              </div>
+              <p class="exp-body">
+                Engineered server-side deployment pipelines for NLP and deep learning models. Implemented robust REST
+                APIs using FastAPI, integrated multi-label classifications with custom database connectors, and
+                optimized model runtime execution times.
+              </p>
+            </div>
+
+            <div class="exp-card glass-card">
+              <div class="exp-header">
+                <div>
+                  <h4>Data Science Intern</h4>
+                  <span class="company">Aguaclan Water Purifiers</span>
+                </div>
+                <span class="exp-date">Jun – Aug 2024</span>
+              </div>
+              <p class="exp-body">
+                Processed, cleaned, and evaluated telemetry log outputs from system sensors. Developed predictive
+                regression models targeting component lifecycle deterioration rates, facilitating proactive maintenance
+                schedules.
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+
+        <!-- TECH STACK (Grid of Categories) -->
+        <div class="tech-stack-section animate-fade-up">
+          <div class="section-header text-center">
+            <h3 class="section-title">Technical Toolbelt</h3>
+            <p class="section-subtitle">A curated view of languages, libraries, databases, and deployment platforms</p>
+          </div>
+
+          <div class="tech-grid">
+            <!-- Languages -->
+            <div class="tech-category glass-card">
+              <h4>Languages</h4>
+              <div class="tech-grid-icons">
+                <div class="stack-item"><i class="devicon-python-plain colored"></i><span>Python</span></div>
+                <div class="stack-item"><i class="devicon-java-plain colored"></i><span>Java</span></div>
+                <div class="stack-item"><i class="devicon-mysql-plain colored"></i><span>SQL</span></div>
+                <div class="stack-item"><i class="devicon-html5-plain colored"></i><span>HTML</span></div>
+                <div class="stack-item"><i class="devicon-css3-plain colored"></i><span>CSS</span></div>
+                <div class="stack-item"><i class="devicon-dart-plain colored"></i><span>Dart</span></div>
+              </div>
+            </div>
+
+            <!-- AI / ML -->
+            <div class="tech-category glass-card">
+              <h4>AI / ML</h4>
+              <div class="tech-grid-icons">
+                <div class="stack-item"><i class="devicon-pytorch-original colored"></i><span>PyTorch</span></div>
+                <div class="stack-item"><i class="devicon-tensorflow-original colored"></i><span>TensorFlow</span></div>
+                <div class="stack-item"><img src="https://cdn.simpleicons.org/keras" alt="Keras"><span>Keras</span>
+                </div>
+                <div class="stack-item"><i class="devicon-pandas-plain colored"></i><span>Pandas</span></div>
+                <div class="stack-item"><i class="devicon-numpy-plain colored"></i><span>NumPy</span></div>
+                <div class="stack-item"><i class="devicon-scikitlearn-plain colored"></i><span>Scikit-learn</span></div>
+                <div class="stack-item"><img src="https://cdn.simpleicons.org/huggingface"
+                    alt="HuggingFace"><span>HuggingFace</span></div>
+                <div class="stack-item"><i class="devicon-opencv-plain colored"></i><span>OpenCV</span></div>
+              </div>
+            </div>
+
+            <!-- Generative AI -->
+            <div class="tech-category glass-card">
+              <h4>Generative AI</h4>
+              <div class="tech-grid-icons">
+                <div class="stack-item"><img src="https://cdn.simpleicons.org/langchain"
+                    alt="LangChain"><span>LangChain</span></div>
+                <div class="stack-item"><img src="https://cdn.simpleicons.org/langgraph"
+                    alt="LangGraph"><span>LangGraph</span></div>
+                <div class="stack-item"><img src="assets/tech/langsmith.svg" alt="LangSmith"><span>LangSmith</span>
+                </div>
+                <div class="stack-item"><img src="assets/tech/ollama.svg" class="tech-icon-invert"
+                    alt="Ollama"><span>Ollama</span></div>
+                <div class="stack-item"><img src="assets/tech/pinecone.svg" alt="Pinecone"><span>Pinecone</span></div>
+                <div class="stack-item"><img src="assets/tech/chroma.svg" alt="Chroma"><span>Chroma</span></div>
+                <div class="stack-item"><img src="assets/tech/groq.svg" alt="Groq"><span>Groq</span></div>
+                <div class="stack-item"><img src="https://cdn.simpleicons.org/meta/0866FF" alt="Llama 3.1"><span>Llama
+                    3.1</span></div>
+                <div class="stack-item"><img src="assets/tech/faiss_rag.svg" alt="FAISS"><span>FAISS</span></div>
+                <div class="stack-item"><img src="assets/tech/rag.svg" alt="RAG"><span>RAG</span></div>
+              </div>
+            </div>
+
+            <!-- MLOps -->
+            <div class="tech-category glass-card">
+              <h4>MLOps & Data</h4>
+              <div class="tech-grid-icons">
+                <div class="stack-item"><img src="https://cdn.simpleicons.org/mlflow" alt="MLflow"><span>MLflow</span>
+                </div>
+                <div class="stack-item"><img src="assets/tech/dagshub.svg" alt="DagsHub"><span>DagsHub</span></div>
+                <div class="stack-item"><i class="devicon-githubactions-plain colored"></i><span>GitHub Actions</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Databases & Web -->
+            <div class="tech-category glass-card">
+              <h4>Databases & Web</h4>
+              <div class="tech-grid-icons">
+                <div class="stack-item"><i class="devicon-mysql-plain colored"></i><span>MySQL</span></div>
+                <div class="stack-item"><i class="devicon-firebase-plain colored"></i><span>Firebase</span></div>
+                <div class="stack-item"><i class="devicon-fastapi-plain colored"></i><span>FastAPI</span></div>
+                <div class="stack-item"><i class="devicon-flask-original"></i><span>Flask</span></div>
+                <div class="stack-item"><img src="https://cdn.simpleicons.org/streamlit"
+                    alt="Streamlit"><span>Streamlit</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ACHIEVEMENTS & AWARDS -->
+        <div class="achievements-section animate-fade-up">
+          <div class="section-header">
+            <h3 class="section-title">Achievements</h3>
+            <p class="section-subtitle">National hackathons, competitive innovation, and research recognitions from my resume</p>
+          </div>
+
+          <div class="achieve-grid">
+            <div class="achieve-item glass-card">
+              <div class="achieve-header">
+                <span class="achieve-badge winner">Winner</span>
+                <span class="achieve-date">08/2026</span>
+              </div>
+              <h4 class="achieve-title">HackNext'26 AI Powered Hackathon</h4>
+              <p class="achieve-desc">Built an Automated AI System for Hospitals to streamline patient & insurance claims, reducing processing time & claim rejections.</p>
+            </div>
+
+            <div class="achieve-item glass-card">
+              <div class="achieve-header">
+                <span class="achieve-badge runner-up">Runner Up</span>
+                <span class="achieve-date">03/2026</span>
+              </div>
+              <h4 class="achieve-title">HackAppsters L&T Edutech Hackathon</h4>
+              <p class="achieve-desc">Built a deep learning-based medical imaging model to classify 10+ chest diseases from radiograms with high accuracy in 24hrs.</p>
+            </div>
+
+            <div class="achieve-item glass-card">
+              <div class="achieve-header">
+                <span class="achieve-badge best-paper">Best Paper Award</span>
+                <span class="achieve-date">03/2026</span>
+              </div>
+              <h4 class="achieve-title">ICAITICA 2026 International Conference</h4>
+              <p class="achieve-desc">Presented research on an AI agent detecting drug trafficking activities on Telegram and Reddit platforms.</p>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+
+    </section>
+
+    <!-- ========================================== -->
+    <!-- TAB 4: CONTACT PAGE                        -->
+    <!-- ========================================== -->
+    <section id="contact" class="tab-pane">
+
+      <div class="container animate-fade-up">
+        <div class="section-header text-center">
+          <h3 class="section-title">Get In Touch</h3>
+          <p class="section-subtitle">Reach out for collaborations, AI integrations, or technical career inquiries</p>
+        </div>
+
+        <div class="contact-grid">
+
+          <!-- Contact Form (Left) -->
+          <div class="contact-form-container glass-card">
+            <h4>Send a Direct Message</h4>
+            <form id="portfolioContactForm" class="contact-form">
+              <div class="form-group-floating">
+                <input type="text" id="contactName" required placeholder=" ">
+                <label for="contactName">Full Name</label>
+              </div>
+
+              <div class="form-group-floating">
+                <input type="email" id="contactEmail" required placeholder=" ">
+                <label for="contactEmail">Email Address</label>
+              </div>
+
+              <div class="form-group-floating">
+                <input type="text" id="contactSubject" required placeholder=" ">
+                <label for="contactSubject">Subject</label>
+              </div>
+
+              <div class="form-group-floating">
+                <textarea id="contactMessage" rows="5" required placeholder=" "></textarea>
+                <label for="contactMessage">Your Message</label>
+              </div>
+
+              <button type="submit" class="btn btn-primary" id="formSubmitBtn">
+                <span class="btn-lbl">Send Message</span>
+                <span class="btn-spinner hide"></span>
+              </button>
+            </form>
+            <div class="form-status-alert hide" id="formStatusMsg"></div>
+          </div>
+
+          <!-- Contact Details (Right) -->
+          <div class="contact-info-container">
+            <div class="info-card glass-card">
+              <div class="info-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
+              </div>
+              <div class="info-body">
+                <h5>Email Address</h5>
+                <a href="mailto:shreepurvaja@gmail.com" class="info-link">shreepurvaja@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="info-card glass-card">
+              <div class="info-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                </svg>
+              </div>
+              <div class="info-body">
+                <h5>Phone Number</h5>
+                <a href="tel:+919363080830" class="info-link">+91 9363080830</a>
+              </div>
+            </div>
+
+            <div class="info-card glass-card">
+              <div class="info-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                  <rect width="4" height="12" x="2" y="9" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
+              </div>
+              <div class="info-body">
+                <h5>LinkedIn Profile</h5>
+                <a href="https://www.linkedin.com/in/shree-purvaja-d/" target="_blank"
+                  class="info-link">linkedin.com/in/shree-purvaja-d</a>
+              </div>
+            </div>
+
+            <div class="info-card glass-card">
+              <div class="info-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path
+                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                </svg>
+              </div>
+              <div class="info-body">
+                <h5>GitHub Registry</h5>
+                <a href="https://github.com/ShreePurvaja" target="_blank"
+                  class="info-link">github.com/ShreePurvaja</a>
+              </div>
+            </div>
+
+            <div class="info-card glass-card">
+              <div class="info-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+              </div>
+              <div class="info-body">
+                <h5>Location</h5>
+                <p class="info-text">Coimbatore, Tamil Nadu, India</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Social button list -->
+        <div class="social-footer-strip text-center animate-fade-up">
+          <h5>Connect Across Platforms</h5>
+          <div class="social-footer-row">
+            <a href="https://github.com/ShreePurvaja" target="_blank" class="circle-btn" aria-label="GitHub">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/shree-purvaja-d/" target="_blank" class="circle-btn" aria-label="LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                <rect width="4" height="12" x="2" y="9" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+            </a>
+                        <a href="tel:+919363080830" class="circle-btn" aria-label="Phone">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg>
+            </a>
+            <a href="mailto:shreepurvaja@gmail.com" class="circle-btn" aria-label="Gmail">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+            </a>
+            <a href="https://kaggle.com/shreepurvaja" target="_blank" class="circle-btn" aria-label="Kaggle">
+              <span class="text-icon">K</span>
+            </a>
+            <a href="https://huggingface.co/shree-purvaja" target="_blank" class="circle-btn" aria-label="HuggingFace">
+              <span class="text-icon">HF</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <p class="copyright">Built with passion by <span class="highlight-purple">Shree Purvaja D</span> &middot; 2026</p>
+      <div class="footer-links">
+        <a href="https://drive.google.com/file/d/1bUL43ZpVA_qvTF9tpmEV5CX33neO5Y-f/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="footer-link">Resume &nearr;</a>
+        <a href="https://github.com/ShreePurvaja" target="_blank" class="footer-link">GitHub Profile</a>
+        <a href="https://www.linkedin.com/in/shree-purvaja-d/" target="_blank" class="footer-link">LinkedIn Profile</a>
+        <a href="mailto:shreepurvaja@gmail.com" class="footer-link">Email</a>
+        <a href="tel:+919363080830" class="footer-link">Phone</a>
+        <button id="backToTop" class="btn-back-top" aria-label="Back to Top">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <line x1="12" x2="12" y1="19" y2="5" />
+            <polyline points="5,12 12,5 19,12" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Dynamic Project Details Modal Popup Overlay -->
+  <div id="projectModal" class="modal-overlay hide">
+    <div class="modal-card glass-card">
+      <button class="modal-close" id="modalCloseBtn" aria-label="Close Modal">&times;</button>
+
+      <div class="modal-grid">
+        <!-- Left Column: Elaboration & Pipeline details -->
+        <div class="modal-info-col">
+          <span class="modal-tag" id="modalTag">ML & DL</span>
+          <h3 class="modal-title" id="modalTitle">Project Title</h3>
+          <p class="modal-desc" id="modalDesc">Detailed elaboration goes here.</p>
+
+          <div class="modal-repo-link-wrapper" id="modalRepoLinkWrapper" style="margin: 15px 0;">
+            <a href="#" target="_blank" class="btn btn-outline" id="modalRepoLink" style="display: inline-flex; align-items: center; gap: 8px; font-size: 0.85rem; padding: 6px 12px; border-radius: 4px;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+              </svg>
+              View Repository on GitHub
+            </a>
+          </div>
+
+          <div class="modal-section">
+            <h5 class="section-mini-lbl">System Architecture Pipeline</h5>
+            <div class="pipeline-flow" id="modalPipeline">
+              <!-- Alternating interactive steps -->
+            </div>
+          </div>
+
+          <div class="modal-section">
+            <h5 class="section-mini-lbl">Technology Stack</h5>
+            <div class="modal-tech" id="modalTech">
+              <!-- Tech Badges -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Tailored Sandbox -->
+        <div class="modal-sandbox-col">
+          <div class="sandbox-header-mini">
+            <h5>Tailored Inference Sandbox</h5>
+            <span class="sandbox-badge">Real-time API Link</span>
+          </div>
+
+          <div class="sandbox-mini-controls">
+            <div class="ctrl-group">
+              <label for="modalSandboxInput" id="modalInputLabel">Input structural data:</label>
+              <input type="text" id="modalSandboxInput" class="sandbox-input" value="">
+              <small class="input-hint" id="modalInputHint">Example input string</small>
+            </div>
+            <button class="btn btn-primary btn-block" id="modalRunBtn">Run Model Prediction &rarr;</button>
+          </div>
+
+          <div class="sandbox-terminal-mini">
+            <div class="terminal-bar">
+              <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+              <span class="terminal-title" id="modalTerminalTitle">inference_mini.log</span>
+            </div>
+            <div class="terminal-body-mini" id="modalTerminalOutput">
+              <div class="term-line system-msg">Console ready. Click "Run Model Prediction" to evaluate this model.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Core JavaScript file -->
+  <script src="script.js"></script>
+</body>
+
+</html>
