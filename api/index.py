@@ -1,0 +1,7 @@
+import sys
+import os
+
+# Add parent directory to path so app.py can be imported directly
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
+from app import app
