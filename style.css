@@ -1632,7 +1632,7 @@ body {
   padding: 0;
   overflow: hidden;
   border-radius: 16px;
-  cursor: pointer;
+  cursor: default;
   display: flex;
   flex-direction: column;
   transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.35s ease, box-shadow 0.35s ease;
@@ -1665,41 +1665,6 @@ body {
 
 .achieve-card:hover .achieve-thumb {
   transform: scale(1.08);
-}
-
-.achieve-media-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(10, 10, 15, 0.15) 0%, rgba(10, 10, 15, 0.8) 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.achieve-card:hover .achieve-media-overlay {
-  opacity: 1;
-}
-
-.achieve-expand-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 0.55rem 1.15rem;
-  background: rgba(17, 17, 24, 0.9);
-  border: 1px solid var(--accent);
-  color: #FFFFFF;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  box-shadow: 0 4px 18px var(--accent-glow);
-  transform: translateY(10px);
-  transition: transform 0.3s ease;
-}
-
-.achieve-card:hover .achieve-expand-btn {
-  transform: translateY(0);
 }
 
 .achieve-tag {
@@ -1793,54 +1758,7 @@ body {
   margin: 0;
 }
 
-/* Lightbox Modal */
-.photo-modal-card {
-  max-width: 840px;
-  width: 92%;
-  padding: 1.5rem;
-  position: relative;
-  background: var(--bg-secondary);
-  border: 1px solid var(--border-color);
-  border-radius: 16px;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.75);
-  animation: modalScaleUp 0.3s cubic-bezier(0.25, 1, 0.5, 1) forwards;
-}
 
-.photo-modal-img-wrap {
-  width: 100%;
-  max-height: 520px;
-  overflow: hidden;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #000000;
-}
-
-.photo-modal-img {
-  width: 100%;
-  max-height: 520px;
-  object-fit: contain;
-  border-radius: 10px;
-}
-
-.photo-modal-caption {
-  margin-top: 1.25rem;
-}
-
-.photo-modal-caption h4 {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 1.3rem;
-  color: var(--text-primary);
-  margin-bottom: 0.4rem;
-}
-
-.photo-modal-caption p {
-  color: var(--text-secondary);
-  font-size: 0.95rem;
-  line-height: 1.5;
-  margin: 0;
-}
 
 
 

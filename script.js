@@ -984,43 +984,4 @@ ${transList}
   }
 
 
-  // --- 11. ACHIEVEMENT CEREMONY PHOTO LIGHTBOX ---
-  window.openPhotoModal = function(imgSrc, title, desc) {
-    const modal = document.getElementById('photoModal');
-    const modalImg = document.getElementById('photoModalImg');
-    const modalTitle = document.getElementById('photoModalTitle');
-    const modalDesc = document.getElementById('photoModalDesc');
-
-    if (!modal || !modalImg) return;
-
-    modalImg.src = imgSrc;
-    if (modalTitle) modalTitle.textContent = title;
-    if (modalDesc) modalDesc.textContent = desc;
-
-    modal.classList.remove('hide');
-    document.body.style.overflow = 'hidden';
-  };
-
-  window.closePhotoModal = function(event) {
-    if (event && event.target && event.target.closest('.photo-modal-card') && !event.target.classList.contains('modal-close')) {
-      return;
-    }
-    const modal = document.getElementById('photoModal');
-    if (modal) {
-      modal.classList.add('hide');
-      document.body.style.overflow = '';
-    }
-  };
-
-  // Close lightbox on Escape key
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-      const modal = document.getElementById('photoModal');
-      if (modal && !modal.classList.contains('hide')) {
-        modal.classList.add('hide');
-        document.body.style.overflow = '';
-      }
-    }
-  });
-
 });
